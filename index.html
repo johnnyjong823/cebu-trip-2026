@@ -1,0 +1,1081 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#083d56">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="宿霧旅遊">
+<meta name="description" content="2026/11/21–11/25 宿霧・薄荷島 5 日員工旅遊：每日行程、行前須知、行李清單與緊急聯絡資訊。">
+<meta property="og:title" content="宿霧・薄荷島 員工旅遊 2026">
+<meta property="og:description" content="11/21–11/25｜鯨鯊共游・巴里卡薩浮潛・眼鏡猴・巧克力山">
+<title>宿霧・薄荷島 員工旅遊</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-180.png">
+<style>
+:root{
+  --deep:#083d56; --ocean:#0b6e8a; --lagoon:#1fa9b8; --foam:#d9f3f5;
+  --coral:#ff7a59; --coral-soft:#ffe6de; --sun:#ffc24b; --leaf:#2f9e6e;
+  --bg:#f4f8f9; --card:#ffffff; --ink:#152733; --muted:#5d7180; --line:#e1e9ec;
+  --warn-bg:#fff4e0; --warn-ink:#8a4b00; --warn-line:#ffd79a;
+  --danger-bg:#ffecec; --danger-ink:#a02828;
+  --shadow:0 1px 2px rgba(8,61,86,.06),0 6px 20px rgba(8,61,86,.07);
+  --radius:18px;
+  --nav-h:64px;
+  --safe-b:env(safe-area-inset-bottom,0px);
+  --safe-t:env(safe-area-inset-top,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0c1a22; --card:#13252f; --ink:#e6f1f4; --muted:#9db2bd; --line:#21384540;
+    --foam:#123542; --coral-soft:#3a2219; --warn-bg:#33270f; --warn-ink:#ffcf85; --warn-line:#5a4318;
+    --danger-bg:#3a1a1a; --danger-ink:#ff9d9d;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25);
+  }
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;touch-action:manipulation;scroll-behavior:smooth}
+html,body{margin:0;overflow-x:hidden;max-width:100%}
+body{
+  background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei","Heiti TC",sans-serif;
+  font-size:16px;line-height:1.6;
+  padding-bottom:calc(var(--nav-h) + var(--safe-b) + 16px);
+  touch-action:manipulation;
+  overscroll-behavior-y:none;
+}
+a{color:var(--ocean)}
+@media (prefers-color-scheme: dark){a{color:#6fd3de}}
+h1,h2,h3{line-height:1.3;margin:0}
+p{margin:.35em 0}
+img,svg{max-width:100%}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;color:#fff;overflow:hidden;
+  background:linear-gradient(160deg,#062f43 0%,#0b6e8a 55%,#1fa9b8 100%);
+  padding:calc(28px + var(--safe-t)) 20px 74px;
+}
+.hero .sun{position:absolute;right:-30px;top:-30px;width:170px;height:170px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,194,75,.95) 0%,rgba(255,194,75,.35) 45%,rgba(255,194,75,0) 70%)}
+.hero .wave{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:56px;display:block}
+.hero-inner{position:relative;max-width:760px;margin:0 auto}
+.eyebrow{display:inline-flex;gap:6px;align-items:center;font-size:13px;letter-spacing:.08em;
+  background:rgba(255,255,255,.16);padding:4px 12px;border-radius:999px;backdrop-filter:blur(4px)}
+.hero h1{font-size:30px;margin:12px 0 6px;font-weight:800;letter-spacing:.02em}
+.hero .sub{opacity:.92;font-size:15px}
+.hero .dates{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.chip-w{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:6px 10px;font-size:14px}
+
+/* ---------- layout ---------- */
+main{max-width:760px;margin:-46px auto 0;padding:0 16px;position:relative;z-index:2}
+.view{display:none;animation:fade .25s ease}
+.view.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;margin-bottom:14px;border:1px solid var(--line)}
+.sec-title{display:flex;align-items:center;gap:8px;font-size:18px;font-weight:800;margin:22px 4px 10px}
+.sec-title .ico{font-size:20px}
+.muted{color:var(--muted)}
+.small{font-size:14px}
+.tiny{font-size:12.5px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:360px){.grid2{grid-template-columns:1fr}}
+
+/* ---------- today / countdown ---------- */
+.today{background:linear-gradient(135deg,#fff 0%,#f0fbfc 100%);border:1px solid #cdebef}
+@media (prefers-color-scheme: dark){.today{background:linear-gradient(135deg,#13252f 0%,#123542 100%);border-color:#1d4552}}
+.today .label{font-size:13px;font-weight:700;color:var(--ocean);letter-spacing:.06em}
+@media (prefers-color-scheme: dark){.today .label{color:#6fd3de}}
+.today h2{font-size:21px;margin:6px 0 4px}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0 8px}
+.cd div{background:var(--deep);color:#fff;border-radius:14px;text-align:center;padding:10px 0 8px}
+.cd b{display:block;font-size:26px;font-variant-numeric:tabular-nums;line-height:1.1}
+.cd span{font-size:12px;opacity:.8}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:0;border-radius:12px;
+  padding:11px 16px;font-size:15px;font-weight:700;cursor:pointer;text-decoration:none;font-family:inherit}
+.btn-primary{background:var(--coral);color:#fff}
+.btn-ghost{background:var(--foam);color:var(--deep)}
+@media (prefers-color-scheme: dark){.btn-ghost{color:#cdeff3}}
+.btn-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+
+/* ---------- key facts ---------- */
+.kv{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px dashed var(--line)}
+.kv:last-child{border-bottom:0;padding-bottom:0}
+.kv:first-child{padding-top:0}
+.kv .k{flex:0 0 auto;width:38px;height:38px;border-radius:12px;background:var(--foam);display:grid;place-items:center;font-size:19px}
+.kv .v{flex:1;min-width:0}
+.kv .v b{display:block}
+
+.flight{display:flex;align-items:center;gap:10px}
+.flight .port{flex:1;min-width:0}
+.flight .port b{display:block;font-size:24px;font-variant-numeric:tabular-nums}
+.flight .port span{font-size:13px;color:var(--muted)}
+.flight .mid{flex:0 0 auto;text-align:center;font-size:12px;color:var(--muted)}
+.flight .mid .plane{font-size:20px;display:block}
+.flight-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;gap:8px;flex-wrap:wrap}
+.pill{display:inline-block;font-size:12.5px;font-weight:700;border-radius:999px;padding:3px 10px;background:var(--foam);color:var(--deep);white-space:nowrap}
+@media (prefers-color-scheme: dark){.pill{color:#cdeff3}}
+.pill.coral{background:var(--coral-soft);color:#c2482a}
+@media (prefers-color-scheme: dark){.pill.coral{color:#ffb39f}}
+.pill.green{background:#e2f5ec;color:#1e7a52}
+@media (prefers-color-scheme: dark){.pill.green{background:#163a2b;color:#8fe0b9}}
+
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 4px;text-align:center;box-shadow:var(--shadow)}
+.fact .i{font-size:22px}
+.fact b{display:block;font-size:14px}
+.fact span{display:block;font-size:11.5px;color:var(--muted)}
+@media (max-width:360px){.facts{grid-template-columns:repeat(2,1fr)}}
+
+.route{display:flex;align-items:center;justify-content:space-between;gap:4px;padding:6px 0}
+.route .stop{text-align:center;flex:1;min-width:0}
+.route .dot{width:14px;height:14px;border-radius:50%;background:var(--lagoon);margin:0 auto 6px;box-shadow:0 0 0 4px var(--foam)}
+.route .stop b{display:block;font-size:13.5px;white-space:nowrap}
+.route .stop span{font-size:11px;color:var(--muted);white-space:nowrap}
+.route .seg{flex:0 0 auto;font-size:13px}
+@media (max-width:360px){.route .stop b{font-size:12px}.route .stop span{font-size:10px}.route .seg{font-size:11px}}
+
+.hotel h3{font-size:16px}
+.hotel .addr{font-size:13px;color:var(--muted)}
+
+/* ---------- itinerary ---------- */
+.daytabs{position:sticky;top:0;z-index:5;display:flex;gap:6px;padding:10px 0;background:var(--bg);margin:0 -16px;padding-left:16px;padding-right:16px}
+.daytab{flex:1;min-width:0;border:1px solid var(--line);background:var(--card);border-radius:14px;padding:6px 2px;text-align:center;cursor:pointer;font-family:inherit;color:var(--ink)}
+.daytab b{display:block;font-size:13px}
+.daytab span{display:block;font-size:11px;color:var(--muted)}
+.daytab.active{background:var(--deep);border-color:var(--deep);color:#fff}
+.daytab.active span{color:#bfe6ec}
+.daytab.is-today{position:relative}
+.daytab.is-today::after{content:"今天";position:absolute;top:-7px;right:-2px;background:var(--coral);color:#fff;font-size:10px;font-weight:700;padding:1px 6px;border-radius:999px}
+
+.day{display:none}
+.day.active{display:block;animation:fade .25s ease}
+.day-hero{border-radius:var(--radius);color:#fff;padding:18px;margin-bottom:14px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.day-hero .emoji{position:absolute;right:10px;bottom:-8px;font-size:72px;opacity:.28;line-height:1}
+.day-hero .no{font-size:13px;font-weight:800;letter-spacing:.1em;opacity:.9}
+.day-hero h2{font-size:22px;margin:4px 0 8px;padding-right:40px}
+.day-hero .path{font-size:14px;opacity:.95}
+.dh1{background:linear-gradient(135deg,#0b6e8a,#1fa9b8)}
+.dh2{background:linear-gradient(135deg,#0a5f86,#22b5d8)}
+.dh3{background:linear-gradient(135deg,#6b4423,#c08b4f)}
+.dh4{background:linear-gradient(135deg,#123e6b,#3b7fc4)}
+.dh5{background:linear-gradient(135deg,#7a3b56,#ff7a59)}
+
+.tl{list-style:none;margin:0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:19px;top:8px;bottom:8px;width:2px;background:var(--line)}
+.tl li{position:relative;display:flex;gap:12px;padding:0 0 16px}
+.tl li:last-child{padding-bottom:0}
+.tl .node{flex:0 0 40px;height:40px;border-radius:50%;background:var(--card);border:2px solid var(--lagoon);display:grid;place-items:center;font-size:18px;position:relative;z-index:1}
+.tl .node.move{border-style:dashed;border-color:var(--muted);font-size:16px}
+.tl .body{flex:1;min-width:0;padding-top:2px}
+.tl .time{font-size:12.5px;font-weight:800;color:var(--coral);font-variant-numeric:tabular-nums}
+.tl h3{font-size:16px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.tl .en{font-size:12.5px;color:var(--muted);font-weight:500}
+.tl p{font-size:14.5px;color:var(--muted)}
+.tl .move-text{font-size:14px;color:var(--muted);padding-top:9px}
+
+.meals{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.meal{background:var(--foam);border-radius:14px;padding:10px;min-width:0}
+.meal .t{font-size:12px;font-weight:800;color:var(--ocean)}
+@media (prefers-color-scheme: dark){.meal .t{color:#6fd3de}}
+.meal div:last-child{font-size:13.5px;line-height:1.45;margin-top:2px;word-break:break-word}
+@media (max-width:380px){.meals{grid-template-columns:1fr}.meal{display:flex;gap:10px;align-items:baseline}.meal .t{flex:0 0 28px}}
+
+.note{border-radius:14px;padding:12px 14px;font-size:14.5px;border:1px solid}
+.note h4{margin:0 0 6px;font-size:15px;display:flex;gap:6px;align-items:center}
+.note ul{margin:0;padding-left:20px}
+.note li{margin:3px 0}
+.note.warn{background:var(--warn-bg);color:var(--warn-ink);border-color:var(--warn-line)}
+.note.danger{background:var(--danger-bg);color:var(--danger-ink);border-color:transparent}
+.note.info{background:var(--foam);color:var(--ink);border-color:transparent}
+.note + .note{margin-top:10px}
+
+.day-nav{display:flex;justify-content:space-between;gap:10px;margin-top:6px}
+.day-nav .btn{flex:1}
+
+/* ---------- checklist ---------- */
+.progress{height:10px;background:var(--foam);border-radius:999px;overflow:hidden;margin:8px 0 4px}
+.progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--lagoon),var(--leaf));border-radius:999px;transition:width .3s}
+.check-group h3{font-size:15px;margin:14px 0 6px;color:var(--ocean)}
+@media (prefers-color-scheme: dark){.check-group h3{color:#6fd3de}}
+.check-group h3:first-child{margin-top:4px}
+.check{display:flex;gap:12px;align-items:flex-start;padding:10px 4px;border-bottom:1px solid var(--line);cursor:pointer;user-select:none;-webkit-user-select:none}
+.check:last-child{border-bottom:0}
+.check input{position:absolute;opacity:0;pointer-events:none}
+.check .box{flex:0 0 24px;height:24px;border-radius:8px;border:2px solid #b7c8d0;display:grid;place-items:center;transition:all .15s;margin-top:1px}
+.check .box::after{content:"";width:6px;height:11px;border:solid #fff;border-width:0 3px 3px 0;transform:rotate(45deg) translate(-1px,-1px);opacity:0}
+.check input:checked + .box{background:var(--leaf);border-color:var(--leaf)}
+.check input:checked + .box::after{opacity:1}
+.check input:checked ~ .txt{color:var(--muted);text-decoration:line-through}
+.check .txt{font-size:15px;flex:1;min-width:0}
+.check .txt small{display:block;font-size:12.5px;color:var(--muted);text-decoration:none}
+
+/* ---------- accordion ---------- */
+details.acc{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:10px;box-shadow:var(--shadow);overflow:hidden}
+details.acc summary{list-style:none;cursor:pointer;padding:15px 44px 15px 16px;font-weight:800;font-size:16px;position:relative;display:flex;gap:10px;align-items:center}
+details.acc summary::-webkit-details-marker{display:none}
+details.acc summary::after{content:"";position:absolute;right:18px;top:50%;width:9px;height:9px;border:solid var(--muted);border-width:0 2px 2px 0;transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+details.acc[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+details.acc .acc-body{padding:0 16px 16px;font-size:14.5px}
+details.acc .acc-body ul{padding-left:20px;margin:6px 0}
+details.acc .acc-body li{margin:5px 0}
+
+table.t{width:100%;border-collapse:collapse;font-size:14px}
+table.t th,table.t td{text-align:left;padding:9px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+table.t th{font-size:12.5px;color:var(--muted);font-weight:700}
+table.t td.num{white-space:nowrap;font-weight:700;text-align:right}
+
+/* ---------- contacts ---------- */
+.contact{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.contact:last-child{border-bottom:0;padding-bottom:0}
+.contact:first-child{padding-top:0}
+.contact .who{flex:1;min-width:0}
+.contact .who b{display:block;font-size:15.5px}
+.contact .who span{display:block;font-size:13px;color:var(--muted);word-break:break-all}
+.call{flex:0 0 auto;width:46px;height:46px;border-radius:50%;background:var(--leaf);color:#fff;display:grid;place-items:center;text-decoration:none;font-size:20px;box-shadow:0 4px 12px rgba(47,158,110,.35)}
+.call.sos{background:#e0443a;box-shadow:0 4px 12px rgba(224,68,58,.35)}
+.call.map{background:var(--ocean);box-shadow:0 4px 12px rgba(11,110,138,.3)}
+.calls{display:flex;gap:8px}
+
+.big-sos{display:flex;gap:12px;align-items:center;background:linear-gradient(135deg,#e0443a,#ff7a59);color:#fff;border-radius:var(--radius);padding:16px;text-decoration:none;box-shadow:var(--shadow);margin-bottom:14px}
+.big-sos .n{font-size:30px;font-weight:900;line-height:1}
+.big-sos .d{font-size:13px;opacity:.95}
+
+/* ---------- bottom nav ---------- */
+nav.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:rgba(255,255,255,.92);
+  backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);
+  border-top:1px solid var(--line);padding-bottom:var(--safe-b)}
+@media (prefers-color-scheme: dark){nav.tabbar{background:rgba(12,26,34,.9)}}
+.tabbar-inner{max-width:760px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);height:var(--nav-h)}
+.tabbar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-decoration:none;color:var(--muted);font-size:12px;font-weight:700}
+.tabbar a .i{font-size:22px;line-height:1;filter:grayscale(1);opacity:.75;transition:all .15s}
+.tabbar a.active{color:var(--ocean)}
+@media (prefers-color-scheme: dark){.tabbar a.active{color:#6fd3de}}
+.tabbar a.active .i{filter:none;opacity:1;transform:translateY(-1px) scale(1.08)}
+
+footer{max-width:760px;margin:24px auto 0;padding:0 20px;text-align:center;font-size:12px;color:var(--muted)}
+
+/* ---------- toast ---------- */
+.toast{position:fixed;left:50%;bottom:calc(var(--nav-h) + var(--safe-b) + 14px);transform:translate(-50%,20px);opacity:0;
+  background:var(--deep);color:#fff;padding:10px 16px;border-radius:12px;font-size:14px;transition:all .25s;z-index:30;pointer-events:none;max-width:calc(100% - 32px)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+@media (min-width:700px){
+  .hero h1{font-size:38px}
+  .hero{padding-bottom:90px}
+  main{margin-top:-60px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="sun"></div>
+  <div class="hero-inner">
+    <span class="eyebrow">🌴 2026 員工旅遊 · 5 天 4 夜</span>
+    <h1>宿霧・薄荷島之旅</h1>
+    <div class="sub">鯨鯊共游｜巴里卡薩大斷層浮潛｜眼鏡猴｜巧克力山</div>
+    <div class="dates">
+      <span class="chip-w">📅 11/21 (六) – 11/25 (三)</span>
+      <span class="chip-w">✈️ 長榮 BR281 / BR282</span>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path fill="var(--bg)" d="M0,64 C240,120 480,8 720,48 C960,88 1200,120 1440,56 L1440,120 L0,120 Z"/>
+  </svg>
+</header>
+
+<main>
+
+<!-- =================== 總覽 =================== -->
+<section class="view" id="view-home" data-view="home">
+
+  <div class="card today" id="todayCard">
+    <!-- rendered by JS -->
+    <div class="label">出發倒數</div>
+    <h2>11/21 (六) 05:50 桃園機場集合</h2>
+  </div>
+
+  <div class="facts">
+    <div class="fact"><div class="i">🕗</div><b>無時差</b><span>與台灣相同</span></div>
+    <div class="fact"><div class="i">💵</div><b>披索 PHP</b><span>出發前先換</span></div>
+    <div class="fact"><div class="i">🔌</div><b>220V</b><span>注意吹風機</span></div>
+    <div class="fact"><div class="i">🌡️</div><b>熱帶氣候</b><span>防曬 + 雨具</span></div>
+  </div>
+
+  <h2 class="sec-title"><span class="ico">📍</span>集合資訊</h2>
+  <div class="card">
+    <div class="kv"><div class="k">⏰</div><div class="v"><b>11/21 (六) 清晨 05:50</b><span class="muted small">請準時，團體機票無法改期</span></div></div>
+    <div class="kv"><div class="k">🛫</div><div class="v"><b>桃園機場 第二航廈</b><span class="muted small">長榮航空 <b style="display:inline">20 號團體櫃台</b></span></div></div>
+    <div class="kv"><div class="k">🧑‍✈️</div><div class="v"><b>領隊 余遠德 先生</b><a href="tel:+886916551612" class="small">+886 916-551-612</a></div></div>
+    <div class="kv"><div class="k">📱</div><div class="v"><b>入境前必填 E-Travel</b><span class="muted small">菲律賓入境電子申報（免費）· <a href="https://etravel.gov.ph" target="_blank" rel="noopener">etravel.gov.ph</a></span></div></div>
+  </div>
+
+  <h2 class="sec-title"><span class="ico">✈️</span>航班</h2>
+  <div class="card">
+    <div class="flight-head"><b>去程 · 長榮 BR281</b><span class="pill">11/21 (六)</span></div>
+    <div class="flight">
+      <div class="port"><b>08:20</b><span>桃園 TPE</span></div>
+      <div class="mid"><span class="plane">✈</span>2h55m</div>
+      <div class="port" style="text-align:right"><b>11:15</b><span>宿霧 CEB</span></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="flight-head"><b>回程 · 長榮 BR282</b><span class="pill coral">11/25 (三)</span></div>
+    <div class="flight">
+      <div class="port"><b>12:30</b><span>宿霧 CEB</span></div>
+      <div class="mid"><span class="plane">✈</span>2h50m</div>
+      <div class="port" style="text-align:right"><b>15:20</b><span>桃園 TPE</span></div>
+    </div>
+    <p class="tiny muted" style="margin-top:10px">💡 有機會搭到長榮 Hello Kitty 彩繪機（夢想機／派對機），依當天調度為準。</p>
+  </div>
+
+  <h2 class="sec-title"><span class="ico">🗺️</span>路線</h2>
+  <div class="card">
+    <div class="route">
+      <div class="stop"><div class="dot"></div><b>桃園</b><span>D1</span></div>
+      <div class="seg">✈️</div>
+      <div class="stop"><div class="dot"></div><b>宿霧</b><span>觀光</span></div>
+      <div class="seg">🚢</div>
+      <div class="stop"><div class="dot" style="background:var(--coral)"></div><b>薄荷島</b><span>住 2 晚</span></div>
+      <div class="seg">🚢</div>
+      <div class="stop"><div class="dot" style="background:var(--coral)"></div><b>宿霧</b><span>住 2 晚</span></div>
+      <div class="seg">✈️</div>
+      <div class="stop"><div class="dot"></div><b>桃園</b><span>D5</span></div>
+    </div>
+  </div>
+
+  <h2 class="sec-title"><span class="ico">🏨</span>住宿</h2>
+  <div class="card hotel">
+    <div class="flight-head"><span class="pill">11/21 – 11/23 · 2 晚</span><span class="pill green">薄荷島</span></div>
+    <h3>Bluewater Panglao Beach Resort</h3>
+    <div class="muted small">邦勞海灘藍水度假村</div>
+    <p class="addr">Sitio Daurong, Danao, Panglao, Bohol 6340</p>
+    <p class="small">私人白沙灘、2 座潟湖造型泳池、房間有浴缸與吹風機。</p>
+    <div class="btn-row">
+      <a class="btn btn-ghost" href="tel:+63384160702">📞 +63 38 416 0702</a>
+      <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Bluewater+Panglao+Beach+Resort" target="_blank" rel="noopener">🗺️ 地圖</a>
+    </div>
+  </div>
+  <div class="card hotel">
+    <div class="flight-head"><span class="pill">11/23 – 11/25 · 2 晚</span><span class="pill green">宿霧</span></div>
+    <h3>Bai Hotel Cebu</h3>
+    <div class="muted small">宿霧白酒店</div>
+    <p class="addr">Ouano Ave. cor. Seno Blvd., Mandaue City, Cebu 6014</p>
+    <p class="small">2017 年開幕的城市飯店，海港景觀、泳池、健身房。</p>
+    <div class="btn-row">
+      <a class="btn btn-ghost" href="tel:+63323428888">📞 +63 32 342 8888</a>
+      <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Bai+Hotel+Cebu" target="_blank" rel="noopener">🗺️ 地圖</a>
+    </div>
+  </div>
+  <p class="tiny muted" style="margin:0 4px">飯店以說明會資料為準；如遇滿房將安排同等級飯店。</p>
+</section>
+
+<!-- =================== 行程 =================== -->
+<section class="view" id="view-days" data-view="days">
+  <div class="daytabs" role="tablist">
+    <button class="daytab" data-day="1"><b>D1</b><span>11/21 六</span></button>
+    <button class="daytab" data-day="2"><b>D2</b><span>11/22 日</span></button>
+    <button class="daytab" data-day="3"><b>D3</b><span>11/23 一</span></button>
+    <button class="daytab" data-day="4"><b>D4</b><span>11/24 二</span></button>
+    <button class="daytab" data-day="5"><b>D5</b><span>11/25 三</span></button>
+  </div>
+
+  <!-- DAY 1 -->
+  <article class="day" data-day="1">
+    <div class="day-hero dh1">
+      <div class="emoji">⛪</div>
+      <div class="no">DAY 1 · 11/21 (六)</div>
+      <h2>出發！宿霧古城巡禮 → 薄荷島</h2>
+      <div class="path">桃園 ✈️ 宿霧 🚌 市區觀光 🚢 薄荷島</div>
+    </div>
+    <div class="note danger" style="margin-bottom:14px">
+      <h4>👕 今天穿著要注意！</h4>
+      聖嬰大教堂規定：<b>上衣需有袖、褲裙需過膝、不可戴帽、不可穿拖鞋</b>。2024/10 起已不再出借披肩，不符合規定將無法入內。
+    </div>
+    <div class="card">
+      <ol class="tl">
+        <li><div class="node">🧳</div><div class="body"><div class="time">05:50</div><h3>桃園機場第二航廈集合</h3><p>長榮航空 20 號團體櫃台，與領隊會合辦理報到。</p></div></li>
+        <li><div class="node">✈️</div><div class="body"><div class="time">08:20 → 11:15</div><h3>長榮 BR281 飛往宿霧</h3><p>飛行約 2 小時 55 分，早餐於機上享用。</p></div></li>
+        <li><div class="node move">🚌</div><div class="body"><div class="move-text">麥克坦機場 → 宿霧市區 約 45 分鐘</div></div></li>
+        <li><div class="node">✝️</div><div class="body"><h3>麥哲倫十字架 <span class="en">Magellan's Cross</span> <span class="pill">入內參觀</span></h3><p>1521 年麥哲倫抵達宿霧時所立，象徵天主教傳入菲律賓的起點。旁邊廣場有攤販與水果攤。</p></div></li>
+        <li><div class="node">⛪</div><div class="body"><h3>聖嬰大教堂 <span class="en">Basilica del Santo Niño</span> <span class="pill">入內參觀</span></h3><p>建於 1740 年的巴洛克式教堂，供奉菲律賓最古老的聖像「幼年耶穌像」。可由十字架步行抵達。</p></div></li>
+        <li><div class="node">🏰</div><div class="body"><h3>聖佩特羅堡 <span class="en">Fort San Pedro</span> <span class="pill">市區觀光</span></h3><p>西班牙殖民時期建造的海岸堡壘，見證宿霧數百年歷史。</p></div></li>
+        <li><div class="node">🍛</div><div class="body"><h3>午餐：菲式風味餐</h3></div></li>
+        <li><div class="node move">🚢</div><div class="body"><div class="move-text">宿霧 → 薄荷島 船程約 2.5 小時</div></div></li>
+        <li><div class="node">🌅</div><div class="body"><h3>晚餐：海景農場私房菜 + 特調飲料</h3><p>入住薄荷島濱海度假村。</p></div></li>
+      </ol>
+    </div>
+    <div class="card">
+      <div class="meals">
+        <div class="meal"><div class="t">早餐</div><div>機上用餐</div></div>
+        <div class="meal"><div class="t">午餐</div><div>菲式風味餐</div></div>
+        <div class="meal"><div class="t">晚餐</div><div>海景農場私房菜＋特調飲料</div></div>
+      </div>
+    </div>
+    <div class="card hotel">
+      <div class="muted tiny">🏨 今晚住宿</div>
+      <h3>Bluewater Panglao Beach Resort</h3>
+      <div class="btn-row"><a class="btn btn-ghost" href="tel:+63384160702">📞 撥打飯店</a><a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Bluewater+Panglao+Beach+Resort" target="_blank" rel="noopener">🗺️ 地圖</a></div>
+    </div>
+    <div class="note warn">
+      <h4>📌 今日提醒</h4>
+      <ul>
+        <li>行李托運每人 1 件、不超過 23 公斤</li>
+        <li>準備小額披索：薄荷島船隻行李小費 <b>PHP 100</b>（去程）</li>
+        <li>機場免稅菸酒：菲律賓入境每人限 <b>1 條香菸</b>，請各自購買、保管收據</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- DAY 2 -->
+  <article class="day" data-day="2">
+    <div class="day-hero dh2">
+      <div class="emoji">🐬</div>
+      <div class="no">DAY 2 · 11/22 (日)</div>
+      <h2>追海豚 × 巴里卡薩大斷層浮潛</h2>
+      <div class="path">薄荷島 🚤 海上活動 🏖️ 度假村悠閒時光</div>
+    </div>
+    <div class="card">
+      <ol class="tl">
+        <li><div class="node">🍳</div><div class="body"><h3>飯店早餐</h3><p>換好泳衣、帶齊浮潛用品準備出海。</p></div></li>
+        <li><div class="node">🐬</div><div class="body"><h3>追蹤海豚生態群 <span class="en">Chasing Dolphins</span> <span class="pill coral">特別安排</span></h3><p>搭乘菲律賓特色「螃蟹船」出海，運氣好可見成群海豚在船邊跳躍嬉戲。</p></div></li>
+        <li><div class="node">🐠</div><div class="body"><h3>巴里卡薩島大斷層浮潛 <span class="en">Balicasag</span> <span class="pill">入內參觀</span></h3><p>海洋保護區，海底從 20 呎驟降至 3,000 呎。玫瑰狀珊瑚、熱帶魚、小丑魚，還能餵魚！</p></div></li>
+        <li><div class="node">🍽️</div><div class="body"><h3>返回度假村享用午餐</h3></div></li>
+        <li><div class="node">🏖️</div><div class="body"><h3>度假村自由活動</h3><p>私人白沙灘漫步，全天免費使用健身房、海連天泳池、按摩池。</p></div></li>
+        <li><div class="node">🌙</div><div class="body"><h3>晚餐：度假村內享用</h3></div></li>
+      </ol>
+    </div>
+    <div class="card">
+      <div class="meals">
+        <div class="meal"><div class="t">早餐</div><div>飯店內早餐</div></div>
+        <div class="meal"><div class="t">午餐</div><div>度假村內用餐</div></div>
+        <div class="meal"><div class="t">晚餐</div><div>度假村內晚餐</div></div>
+      </div>
+    </div>
+    <div class="card hotel">
+      <div class="muted tiny">🏨 今晚住宿</div>
+      <h3>Bluewater Panglao Beach Resort</h3>
+      <div class="btn-row"><a class="btn btn-ghost" href="tel:+63384160702">📞 撥打飯店</a></div>
+    </div>
+    <div class="note warn">
+      <h4>🤿 今日攜帶</h4>
+      <ul>
+        <li>泳衣（可先穿在衣服裡）、毛巾、換洗衣物</li>
+        <li>珊瑚鞋／防水拖鞋、防水手機袋</li>
+        <li>海洋友善防曬、帽子、太陽眼鏡；容易暈船請先吃藥</li>
+        <li>浮潛用具旅行社免費提供，介意衛生可自備</li>
+      </ul>
+    </div>
+    <div class="note info">
+      <h4>🌧️ 天候備案</h4>
+      海豚＋大斷層浮潛為組合活動。若因天候、海象無法出海，改為 <b>精油 SPA 1 小時（含按摩小費，不可轉讓）</b>；不想按摩者或 12 歲以下，每人改贈芒果乾 3 包。
+    </div>
+    <div class="note danger">
+      <h4>🦺 安全</h4>
+      搭船「全程」穿救生衣、坐穩勿走動；勿超越安全警戒線。高血壓、心臟病、孕婦等不適合參加水上活動。
+    </div>
+  </article>
+
+  <!-- DAY 3 -->
+  <article class="day" data-day="3">
+    <div class="day-hero dh3">
+      <div class="emoji">🍫</div>
+      <div class="no">DAY 3 · 11/23 (一)</div>
+      <h2>眼鏡猴、巧克力山、叢林竹筏</h2>
+      <div class="path">薄荷島陸上觀光 🚢 返回宿霧</div>
+    </div>
+    <div class="card">
+      <ol class="tl">
+        <li><div class="node">🍳</div><div class="body"><h3>飯店早餐、退房</h3><p>整理好行李，今天會搭船回宿霧。</p></div></li>
+        <li><div class="node move">🚌</div><div class="body"><div class="move-text">飯店 → 眼鏡猴保護區 約 1.5 小時</div></div></li>
+        <li><div class="node">🐒</div><div class="body"><h3>迷你眼鏡猴 <span class="en">Tarsier</span> <span class="pill">入內參觀</span></h3><p>全世界最小的猴子之一，頭可轉動 180 度、大眼像貓頭鷹，據說是電影 ET 的造型藍本。</p></div></li>
+        <li><div class="node">🗿</div><div class="body"><h3>歃血盟約紀念碑 <span class="en">Blood Compact</span> <span class="pill">下車參觀</span></h3><p>記錄當地祖先與西班牙人結盟的歷史。</p></div></li>
+        <li><div class="node">⛪</div><div class="body"><h3>聖約瑟夫教堂 <span class="pill">入內參觀</span></h3><p>超過 300 年歷史，融合羅馬天主教建築特色，保存大量古文獻。</p></div></li>
+        <li><div class="node">🛶</div><div class="body"><h3>午餐：漂流竹筏船屋 <span class="pill coral">特別安排</span></h3><p>乘船沿原始叢林河道逆流而上，一邊享用自助式菲式料理、聽現場演唱。</p></div></li>
+        <li><div class="node move">🚌</div><div class="body"><div class="move-text">前往巧克力山 約 50 分鐘</div></div></li>
+        <li><div class="node">🍫</div><div class="body"><h3>巧克力山 <span class="en">Chocolate Hills</span> <span class="pill">下車參觀</span></h3><p>上千座圓錐形山丘綿延一片，登上觀景台眺望最壯觀。</p></div></li>
+        <li><div class="node move">🚢</div><div class="body"><div class="move-text">薄荷島 → 宿霧 船程約 2.5 小時</div></div></li>
+        <li><div class="node">🥢</div><div class="body"><h3>晚餐：中式料理</h3><p class="tiny">（10 人以下改為菲式風味餐）入住宿霧市區飯店。</p></div></li>
+      </ol>
+      <p class="tiny muted" style="margin-top:12px">※ 景點順序依導遊現場安排調整。</p>
+    </div>
+    <div class="card">
+      <div class="meals">
+        <div class="meal"><div class="t">早餐</div><div>飯店內早餐</div></div>
+        <div class="meal"><div class="t">午餐</div><div>漂流竹筏餐</div></div>
+        <div class="meal"><div class="t">晚餐</div><div>中式料理</div></div>
+      </div>
+    </div>
+    <div class="card hotel">
+      <div class="muted tiny">🏨 今晚住宿</div>
+      <h3>Bai Hotel Cebu</h3>
+      <div class="btn-row"><a class="btn btn-ghost" href="tel:+63323428888">📞 撥打飯店</a><a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Bai+Hotel+Cebu" target="_blank" rel="noopener">🗺️ 地圖</a></div>
+    </div>
+    <div class="note warn">
+      <h4>📌 今日提醒</h4>
+      <ul>
+        <li>退房前檢查保險箱、充電線；取回入住保證金／銷毀信用卡簽單</li>
+        <li>船隻行李小費 <b>PHP 100</b>（回程）</li>
+        <li>參觀眼鏡猴請保持安靜、勿用閃光燈、勿觸摸</li>
+        <li>請勿帶走沙子、貝殼、海星（出境查獲重罰）</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- DAY 4 -->
+  <article class="day" data-day="4">
+    <div class="day-hero dh4">
+      <div class="emoji">🐋</div>
+      <div class="no">DAY 4 · 11/24 (二)</div>
+      <h2>歐斯陸與鯨鯊共游</h2>
+      <div class="path">宿霧 🚌 歐斯陸 Oslob 🚌 宿霧 · 維京人自助餐</div>
+    </div>
+    <div class="note danger" style="margin-bottom:14px">
+      <h4>🚫 今天「不要」擦防曬乳！</h4>
+      鯨鯊是濾食性生物，防曬乳溶於水會影響牠們進食。違規可能面臨高額罰金甚至刑責。請改穿防曬衣物。
+    </div>
+    <div class="card">
+      <ol class="tl">
+        <li><div class="node">🌄</div><div class="body"><h3>清晨出發，早餐為精緻餐盒</h3><p>出發時間依領隊前一晚通知。</p></div></li>
+        <li><div class="node move">🚌</div><div class="body"><div class="move-text">宿霧市區 → 歐斯陸 車程約 4 小時</div></div></li>
+        <li><div class="node">🐋</div><div class="body"><h3>歐斯陸鯨鯊保育區 <span class="en">Oslob Whale Shark</span> <span class="pill coral">HOT</span></h3><p>聽完生態與安全說明後搭小船出海，戴上面鏡下水，與海中最大的魚類近距離共游！</p></div></li>
+        <li><div class="node">🍲</div><div class="body"><h3>午餐：歐斯陸風味餐</h3></div></li>
+        <li><div class="node">🏛️</div><div class="body"><h3>古老的西班牙軍營 <span class="pill">入內參觀</span></h3><p>以附近珊瑚礁岩建造，菲律賓殖民史的見證。</p></div></li>
+        <li><div class="node">⛪</div><div class="body"><h3>聖母無原罪主教區教堂 <span class="pill">入內參觀</span></h3><p>建於 1690 年，1840 年成為獨立教堂，歷史氛圍濃厚。</p></div></li>
+        <li><div class="node move">🚌</div><div class="body"><div class="move-text">返回宿霧市區 約 4 小時</div></div></li>
+        <li><div class="node">🍻</div><div class="body"><h3>晚餐：Vikings Luxury Buffet <span class="pill coral">啤酒飲料喝到飽</span></h3><p>宿霧人氣自助餐：壽司、生魚片、海鮮、燒烤、甜點，位於商場內，餐後可順便逛街。</p></div></li>
+      </ol>
+    </div>
+    <div class="card">
+      <div class="meals">
+        <div class="meal"><div class="t">早餐</div><div>精緻餐盒</div></div>
+        <div class="meal"><div class="t">午餐</div><div>歐斯陸風味餐</div></div>
+        <div class="meal"><div class="t">晚餐</div><div>維京人自助餐</div></div>
+      </div>
+    </div>
+    <div class="card hotel">
+      <div class="muted tiny">🏨 今晚住宿</div>
+      <h3>Bai Hotel Cebu</h3>
+      <div class="btn-row"><a class="btn btn-ghost" href="tel:+63323428888">📞 撥打飯店</a></div>
+    </div>
+    <div class="note warn">
+      <h4>🐋 鯨鯊共游守則</h4>
+      <ul>
+        <li>下水時<b>嚴禁跳水</b></li>
+        <li>全程<b>不可觸碰</b>鯨鯊</li>
+        <li>保持 <b>4 公尺以上</b>距離，不要待在尾鰭處，讓鯨鯊先通過</li>
+        <li>不可使用閃光燈攝影</li>
+        <li>不可丟垃圾、不可餵食</li>
+        <li>身上<b>不可塗抹防曬乳</b></li>
+      </ul>
+    </div>
+    <div class="note info">
+      <h4>🎒 今日攜帶</h4>
+      泳衣、毛巾、換洗衣物、防水手機袋、薄外套（車程長冷氣強）、暈車藥。
+    </div>
+    <div class="note info">
+      <h4>🌧️ 天候備案</h4>
+      <ul>
+        <li><b>方案一：</b>薄荷島與歐斯陸都不宜前往 → 導遊現場每人退 NT$1,000</li>
+        <li><b>方案二：</b>已抵達歐斯陸但風浪太大無法共游 → 現場退 NT$700（午餐與市區觀光照常）</li>
+        <li><b>方案三：</b>天候允許前往薄荷島 → 改安排薄荷島 Day Tour，不退費</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- DAY 5 -->
+  <article class="day" data-day="5">
+    <div class="day-hero dh5">
+      <div class="emoji">🏠</div>
+      <div class="no">DAY 5 · 11/25 (三)</div>
+      <h2>滿載回憶，返回台灣</h2>
+      <div class="path">宿霧 ✈️ 桃園</div>
+    </div>
+    <div class="card">
+      <ol class="tl">
+        <li><div class="node">🍳</div><div class="body"><h3>飯店早餐、退房</h3><p>依領隊通知時間集合前往機場（起飛前 2 小時抵達）。</p></div></li>
+        <li><div class="node">✈️</div><div class="body"><div class="time">12:30 → 15:20</div><h3>長榮 BR282 宿霧 → 桃園</h3><p>飛行約 2 小時 50 分，午餐於機上享用。</p></div></li>
+        <li><div class="node">🎉</div><div class="body"><h3>抵達桃園機場，賦歸</h3><p>辛苦了！期待下次再一起出遊。</p></div></li>
+      </ol>
+    </div>
+    <div class="card">
+      <div class="meals">
+        <div class="meal"><div class="t">早餐</div><div>飯店內早餐</div></div>
+        <div class="meal"><div class="t">午餐</div><div>機上用餐</div></div>
+        <div class="meal"><div class="t">晚餐</div><div>—</div></div>
+      </div>
+    </div>
+    <div class="note danger">
+      <h4>🧳 回程打包注意</h4>
+      <ul>
+        <li>從菲律賓出發<b>禁止攜帶或托運任何打火機、火柴</b></li>
+        <li>行動電源、鋰電池<b>只能隨身</b>，不可托運；機上全程禁用與充電</li>
+        <li>不可帶走海灘沙子、貝殼、海星</li>
+        <li>電子煙及其產品<b>不得攜帶入境台灣</b></li>
+        <li>出發時寄放的免稅品，記得在桃園機場領取</li>
+      </ul>
+    </div>
+    <div class="note warn">
+      <h4>📌 退房檢查</h4>
+      保險箱、護照、充電器、晾在浴室的泳衣；取回入住保證金或銷毀信用卡簽單。
+    </div>
+  </article>
+
+  <div class="day-nav">
+    <button class="btn btn-ghost" id="prevDay">‹ 前一天</button>
+    <button class="btn btn-ghost" id="nextDay">後一天 ›</button>
+  </div>
+</section>
+
+<!-- =================== 行前須知 =================== -->
+<section class="view" id="view-prep" data-view="prep">
+
+  <h2 class="sec-title" style="margin-top:6px"><span class="ico">⚠️</span>出發前必辦</h2>
+  <div class="card">
+    <div class="kv"><div class="k">📝</div><div class="v"><b>填寫 E-Travel（必填）</b><span class="small muted">入境菲律賓前 5 天內上網填寫，完成後截圖 QR Code 備用。官方網站免費，小心付費的假網站。</span><div class="btn-row"><a class="btn btn-primary" href="https://etravel.gov.ph" target="_blank" rel="noopener">前往 etravel.gov.ph ↗</a></div></div></div>
+    <div class="kv"><div class="k">🛂</div><div class="v"><b>檢查護照效期</b><span class="small muted">建議效期 6 個月以上，並確認護照完好無破損。</span></div></div>
+    <div class="kv"><div class="k">💱</div><div class="v"><b>兌換披索 (PHP)</b><span class="small muted">小費、船隻行李費、自費活動多以披索支付，建議準備小鈔。</span></div></div>
+    <div class="kv"><div class="k">🍱</div><div class="v"><b>特殊餐食請提早告知</b><span class="small muted">素食等需求最晚出發前 3 天（不含假日）告知；菲律賓普遍沒有素食觀念，可自備乾糧。</span></div></div>
+    <div class="kv"><div class="k">🛡️</div><div class="v"><b>旅遊平安險／不便險</b><span class="small muted">行程已含旅行業責任險（意外死殘 250 萬、意外醫療 10 萬），建議自行加保。</span></div></div>
+    <div class="kv"><div class="k">📶</div><div class="v"><b>網路</b><span class="small muted">出發前準備漫遊、eSIM 或網卡。本頁可「加入主畫面」離線查看。</span></div></div>
+  </div>
+
+  <h2 class="sec-title"><span class="ico">🧳</span>行李清單</h2>
+  <div class="card" id="checklist">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px">
+      <b id="ckCount">0 / 0 已準備</b>
+      <button class="btn btn-ghost" id="ckReset" style="padding:6px 12px;font-size:13px">重設</button>
+    </div>
+    <div class="progress"><i id="ckBar"></i></div>
+    <p class="tiny muted" style="margin:0 0 6px">勾選狀態只會儲存在你自己的手機上。</p>
+    <div class="check-group" id="ckGroups"></div>
+  </div>
+
+  <h2 class="sec-title"><span class="ico">💰</span>小費參考</h2>
+  <div class="card">
+    <table class="t">
+      <thead><tr><th>項目</th><th>對象 / 方式</th><th style="text-align:right">金額</th></tr></thead>
+      <tbody>
+        <tr><td>領隊</td><td>每人每天</td><td class="num">NT$150</td></tr>
+        <tr><td>導遊</td><td>每人每天</td><td class="num">NT$150</td></tr>
+        <tr><td>薄荷島船隻行李</td><td>每人（去 100＋回 100）</td><td class="num">PHP 200</td></tr>
+        <tr><td>旅館行李</td><td>每人每件</td><td class="num">PHP 50</td></tr>
+        <tr><td>床頭小費</td><td>每房每天</td><td class="num">PHP 50</td></tr>
+        <tr><td>按摩師</td><td>每人每次</td><td class="num">PHP 100</td></tr>
+      </tbody>
+    </table>
+    <p class="tiny muted" style="margin-top:10px">★ 若未派領隊，當地導遊小費改為每人每天 NT$300。實際收取方式以領隊說明為準。</p>
+  </div>
+
+  <h2 class="sec-title"><span class="ico">💆</span>自費活動參考</h2>
+  <div class="card">
+    <table class="t">
+      <thead><tr><th>活動</th><th>時間</th><th style="text-align:right">費用</th></tr></thead>
+      <tbody>
+        <tr><td>宿霧 精油按摩</td><td>60 分</td><td class="num">NT$1,000</td></tr>
+        <tr><td>宿霧 精油按摩</td><td>90 分</td><td class="num">NT$1,200</td></tr>
+        <tr><td>薄荷島 精油按摩</td><td>90 分</td><td class="num">PHP 2,600</td></tr>
+        <tr><td>薄荷島 精油按摩</td><td>120 分</td><td class="num">PHP 3,500</td></tr>
+        <tr><td>薄荷島 體驗潛水 <span class="pill coral" style="font-size:11px">風險 A</span></td><td>2.5–3 時</td><td class="num">PHP 5,000</td></tr>
+      </tbody>
+    </table>
+    <p class="tiny muted" style="margin-top:10px">按摩不接受 12 歲以下、按摩小費自理。體驗潛水含裝備、教學與一支氣瓶；高血壓、心臟衰弱、癲癇、剛動完手術、酒醉、孕婦不適合參加。請務必使用旅行社指定業者。</p>
+  </div>
+
+  <h2 class="sec-title"><span class="ico">📖</span>注意事項</h2>
+
+  <details class="acc">
+    <summary>🛃 機場安檢 & 行李規定</summary>
+    <div class="acc-body">
+      <ul>
+        <li>請於起飛前 <b>2 小時</b>抵達機場；托運每人 1 件、<b>23 公斤</b>以內。</li>
+        <li>隨身液體：每瓶 ≤ <b>100ml</b>，裝入 ≤ 1 公升可重複密封透明袋（約 20×20 cm），每人限 1 袋。</li>
+        <li>行動電源、鋰電池（100Wh 以下）<b>只能隨身</b>，不可托運；長榮等航空<b>機上全程禁止使用及充電</b>。</li>
+        <li>剪刀、指甲銼、鑷子等尖銳物品放托運。</li>
+        <li>台灣出發可隨身帶 1 個打火機（非防風/藍焰）；<b>菲律賓出發的航班禁止攜帶或托運任何打火機、火柴</b>。</li>
+        <li>雨傘請放托運行李。防狼噴霧不可隨身。</li>
+        <li><b>電子煙</b>屬類菸品，不得攜帶入境台灣。</li>
+        <li>團體機票無法事先選位、累積哩程，座位依姓氏排序，同行者不一定相鄰。</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="acc">
+    <summary>🇵🇭 菲律賓入境 & 當地規定</summary>
+    <div class="acc-body">
+      <ul>
+        <li>菲律賓海關檢查嚴格：在台灣機場買的免稅品建議<b>回程再領</b>，避免入境被要求出示收據或課稅。</li>
+        <li>香菸每人限帶 <b>1 條</b>，收據上只能出現 1 條，同行者請分開購買、各自保管。</li>
+        <li><b>嚴禁</b>攜帶海灘沙粒、貝殼、海星等自然產物離境，查獲將處高額罰金。</li>
+        <li>聖嬰大教堂：有袖上衣、過膝褲裙、不可戴帽、不可穿拖鞋。</li>
+        <li>團體行程恕無法脫隊；夜間或自由活動外出務必告知領隊並約定返回時間。</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="acc">
+    <summary>🏨 住宿須知</summary>
+    <div class="acc-body">
+      <ul>
+        <li>入住時可能收取「保證金」（現金或信用卡），退房時記得取回或銷毀簽單。</li>
+        <li>菲律賓飯店不一定提供牙膏、牙刷、梳子、潤髮乳、拖鞋、刮鬍刀，請<b>自備盥洗用品</b>。</li>
+        <li>吹風機不一定每間都有，如需自帶請確認支援 <b>220V</b>。</li>
+        <li>熱水由鍋爐供應，尖峰時段可能不足，請稍候 30–60 分鐘或避開熱門時段。</li>
+        <li>床型、樓層等特殊需求以現場入住為準。迷你吧、付費電視、客房服務需自費。</li>
+        <li>房門隨時上安全鎖，貴重物品放保險箱；勿在燈上晾衣物。</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="acc">
+    <summary>👕 穿著 & 天氣</summary>
+    <div class="acc-body">
+      <ul>
+        <li>熱帶高溫多雨：輕薄透氣衣物、防曬用品、輕便雨具。</li>
+        <li>車上冷氣很強，帶一件薄外套（D4 單程車程約 4 小時）。</li>
+        <li>泳衣、珊瑚鞋必備；浮潛用具旅行社有提供公用款。</li>
+        <li>Day 1 教堂參觀：有袖上衣＋過膝褲裙＋包鞋。</li>
+      </ul>
+      <div class="btn-row">
+        <a class="btn btn-ghost" href="https://www.google.com/search?q=Cebu+weather" target="_blank" rel="noopener">☀️ 宿霧天氣</a>
+        <a class="btn btn-ghost" href="https://www.google.com/search?q=Panglao+Bohol+weather" target="_blank" rel="noopener">🌤️ 薄荷島天氣</a>
+      </div>
+    </div>
+  </details>
+
+  <details class="acc">
+    <summary>🛟 安全守則</summary>
+    <div class="acc-body">
+      <ul>
+        <li>搭乘任何船隻請<b>全程穿救生衣</b>，坐穩勿走動。</li>
+        <li>勿在泳池開放時間外或無救生員時下水，勿超越安全警戒線。</li>
+        <li>身體狀況不佳者請勿參加刺激性活動。</li>
+        <li>公共場合勿露財、勿當眾點鈔；證件錢包不離身，小心扒手與陌生人搭訕。</li>
+        <li>不幫任何人（包括團友）托帶行李。</li>
+        <li>請自備個人藥品：感冒藥、腸胃藥、暈車藥及慢性病用藥；身體不適請立即告知領隊。</li>
+        <li>水上活動請使用旅行社指定業者，有問題第一時間聯絡領隊與導遊。</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="acc">
+    <summary>🍽️ 餐食 & 其他</summary>
+    <div class="acc-body">
+      <ul>
+        <li>菲律賓多屬離島，餐點準備較簡單；合菜 8–12 人一桌。</li>
+        <li>行程含景點、餐食，自行放棄無法退費或轉讓。</li>
+        <li>本行程<b>無購物站</b>，遊覽車上可能販售芒果乾、香蕉乾、椰子油等特產，自由選購。</li>
+        <li>行程順序可能因天候、海況、交通調整，以現場安排為準。</li>
+        <li>有行動不便、慢性疾病或 70 歲以上，請主動告知領隊。</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="acc">
+    <summary>🌱 責任旅人</summary>
+    <div class="acc-body">
+      <ul>
+        <li>自備水壺、環保餐具，適量取餐不浪費。</li>
+        <li>選擇<b>海洋友善防曬</b>，保護珊瑚（鯨鯊當天完全不擦）。</li>
+        <li>自備盥洗用品，離開房間隨手關燈、空調適度調高。</li>
+        <li>生態區不喧嘩、不餵食野生動物、不踩踏植被、不帶走自然資源。</li>
+        <li>參觀教堂與古蹟穿著得體，勿塗鴉、攀爬。</li>
+      </ul>
+    </div>
+  </details>
+</section>
+
+<!-- =================== 聯絡 =================== -->
+<section class="view" id="view-contact" data-view="contact">
+
+  <a class="big-sos" href="tel:+639178194597" style="margin-top:6px">
+    <div style="font-size:30px">🆘</div>
+    <div style="flex:1;min-width:0">
+      <div style="font-weight:800">駐菲律賓台北經濟文化辦事處・急難救助</div>
+      <div class="d">+63 917-819-4597（菲國境內直撥 0917-819-4597）</div>
+    </div>
+  </a>
+
+  <h2 class="sec-title" style="margin-top:6px"><span class="ico">🧑‍✈️</span>領隊 & 機場</h2>
+  <div class="card">
+    <div class="contact"><div class="who"><b>領隊 余遠德 先生</b><span>+886 916-551-612</span></div><a class="call" href="tel:+886916551612" aria-label="撥打領隊">📞</a></div>
+    <div class="contact"><div class="who"><b>送機人員・桃園第二航廈</b><span>0921-809-207</span></div><a class="call" href="tel:+886921809207" aria-label="撥打送機人員第二航廈">📞</a></div>
+    <div class="contact"><div class="who"><b>送機人員・桃園第一航廈</b><span>0921-809-206</span></div><a class="call" href="tel:+886921809206" aria-label="撥打送機人員第一航廈">📞</a></div>
+    <div class="contact"><div class="who"><b>緊急調度（聯繫不上送機人員時）</b><span>0932-365-795</span></div><a class="call sos" href="tel:+886932365795" aria-label="撥打緊急調度">📞</a></div>
+    <div class="contact"><div class="who"><b>長榮航空</b><span>+886 3-351-6805</span></div><a class="call" href="tel:+88633516805" aria-label="撥打長榮航空">📞</a></div>
+  </div>
+
+  <h2 class="sec-title"><span class="ico">🇵🇭</span>當地聯絡</h2>
+  <div class="card">
+    <div class="contact"><div class="who"><b>地接社 經典旅遊</b><span>Classic Leisure International Travel &amp; Tours · +63 2-854-6038</span></div><a class="call" href="tel:+6328546038" aria-label="撥打地接社">📞</a></div>
+    <div class="contact"><div class="who"><b>緊急聯絡人 Mr. Wilson Ko</b><span>0917-558-7898（+63 917-558-7898）</span></div><a class="call" href="tel:+639175587898" aria-label="撥打 Wilson Ko">📞</a></div>
+    <div class="contact"><div class="who"><b>緊急聯絡人 周莉虹</b><span>0963-111-756</span></div><a class="call" href="tel:0963111756" aria-label="撥打周莉虹">📞</a></div>
+    <div class="contact"><div class="who"><b>菲律賓緊急電話</b><span>警察／消防／救護</span></div><a class="call sos" href="tel:911" aria-label="撥打 911">911</a></div>
+  </div>
+
+  <h2 class="sec-title"><span class="ico">🏨</span>飯店</h2>
+  <div class="card">
+    <div class="contact"><div class="who"><b>Bluewater Panglao Beach Resort</b><span>薄荷島 · 11/21–11/23 · +63 38-416-0702</span></div>
+      <div class="calls"><a class="call map" href="https://www.google.com/maps/search/?api=1&query=Bluewater+Panglao+Beach+Resort" target="_blank" rel="noopener" aria-label="地圖">🗺️</a><a class="call" href="tel:+63384160702" aria-label="撥打 Bluewater">📞</a></div></div>
+    <div class="contact"><div class="who"><b>Bai Hotel Cebu</b><span>宿霧 · 11/23–11/25 · +63 32-342-8888</span></div>
+      <div class="calls"><a class="call map" href="https://www.google.com/maps/search/?api=1&query=Bai+Hotel+Cebu" target="_blank" rel="noopener" aria-label="地圖">🗺️</a><a class="call" href="tel:+63323428888" aria-label="撥打 Bai Hotel">📞</a></div></div>
+  </div>
+
+  <h2 class="sec-title"><span class="ico">☎️</span>撥號教學</h2>
+  <div class="card small">
+    <p><b>在菲律賓打回台灣</b><br>00 + 886 + 區碼/手機（去掉開頭 0）<br><span class="muted">例：0912-345-678 → 00-886-912-345-678</span></p>
+    <p style="margin-top:10px"><b>從台灣打到菲律賓</b><br>002 + 63 + 區碼 + 號碼；手機去掉開頭 0<br><span class="muted">宿霧區碼 32、薄荷島區碼 38</span></p>
+    <p class="tiny muted" style="margin-top:10px">💡 手機上直接點 📞 即可，本頁號碼已轉成國際格式（+），漫遊時也能撥通。</p>
+  </div>
+
+  <h2 class="sec-title"><span class="ico">🏛️</span>駐菲律賓台北經濟文化辦事處</h2>
+  <div class="card small">
+    <p>28th Fl., Pacific Star Bldg., Sen. Gil J. Puyat Ave. cor. Makati Ave., Makati City, Metro Manila</p>
+    <p>電話：+63 2-892-1381～85　傳真：+63 2-811-5165</p>
+    <p class="muted">領務：週一～五 08:45–11:30 收件、13:30–16:30 發件</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  資料來源：旅行社說明會資料（列印 2026/11/04）・ 行程以領隊與導遊現場說明為準<br>
+  團號 26PHN21BRD
+</footer>
+
+<nav class="tabbar" aria-label="主選單">
+  <div class="tabbar-inner">
+    <a href="#home" data-tab="home"><span class="i">🏝️</span>總覽</a>
+    <a href="#days" data-tab="days"><span class="i">🗓️</span>行程</a>
+    <a href="#prep" data-tab="prep"><span class="i">✅</span>行前</a>
+    <a href="#contact" data-tab="contact"><span class="i">📞</span>聯絡</a>
+  </div>
+</nav>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+  'use strict';
+
+  /* ---------- 禁止手機縮放（iOS Safari 會忽略 user-scalable=no，需額外攔截） ---------- */
+  ['gesturestart','gesturechange','gestureend'].forEach(function(ev){
+    document.addEventListener(ev, function(e){ e.preventDefault(); }, {passive:false});
+  });
+  document.addEventListener('touchmove', function(e){
+    if (e.touches && e.touches.length > 1) e.preventDefault();
+    if (typeof e.scale === 'number' && e.scale !== 1) e.preventDefault();
+  }, {passive:false});
+  var lastTouchEnd = 0;
+  document.addEventListener('touchend', function(e){
+    var now = Date.now();
+    // 連點兩下且不是點在可互動元素上 → 擋掉雙擊縮放
+    if (now - lastTouchEnd <= 300 && !e.target.closest('a,button,label,summary,input')) e.preventDefault();
+    lastTouchEnd = now;
+  }, {passive:false});
+
+  /* ---------- 台灣/菲律賓時間 (UTC+8) ---------- */
+  var TZ_MS = 8 * 3600 * 1000;
+  var DEPART = Date.UTC(2026, 10, 20, 21, 50); // 2026-11-21 05:50 UTC+8
+  var TRIP = [
+    {d:1, date:'2026-11-21', title:'出發！宿霧古城巡禮 → 薄荷島', tip:'05:50 桃園 T2 長榮 20 號團體櫃台集合。穿有袖上衣、過膝褲裙、包鞋（聖嬰大教堂規定）。'},
+    {d:2, date:'2026-11-22', title:'追海豚 × 巴里卡薩大斷層浮潛', tip:'泳衣、毛巾、珊瑚鞋、防水手機袋、海洋友善防曬。'},
+    {d:3, date:'2026-11-23', title:'眼鏡猴、巧克力山、叢林竹筏', tip:'今天退房移動到宿霧，記得取回保證金；船隻行李小費 PHP 100。'},
+    {d:4, date:'2026-11-24', title:'歐斯陸與鯨鯊共游', tip:'清晨出發！今天不要擦防曬乳；帶泳衣、毛巾、換洗衣物、薄外套。'},
+    {d:5, date:'2026-11-25', title:'滿載回憶，返回台灣', tip:'12:30 BR282 起飛。打火機不可帶上機、行動電源隨身。'}
+  ];
+  function localTodayStr(){
+    var t = new Date(Date.now() + TZ_MS);
+    return t.getUTCFullYear() + '-' + String(t.getUTCMonth()+1).padStart(2,'0') + '-' + String(t.getUTCDate()).padStart(2,'0');
+  }
+  function todayTrip(){
+    var s = localTodayStr();
+    for (var i=0;i<TRIP.length;i++) if (TRIP[i].date === s) return TRIP[i];
+    return null;
+  }
+
+  /* ---------- Today card ---------- */
+  var card = document.getElementById('todayCard');
+  var cdTimer = null;
+  function renderToday(){
+    var now = Date.now();
+    var t = todayTrip();
+    if (cdTimer) { clearInterval(cdTimer); cdTimer = null; }
+    if (t){
+      card.innerHTML =
+        '<div class="label">🌞 今天 · DAY ' + t.d + '</div>' +
+        '<h2>' + t.title + '</h2>' +
+        '<p class="small">' + t.tip + '</p>' +
+        '<div class="btn-row"><a class="btn btn-primary" href="#days/' + t.d + '">查看今日行程 ›</a>' +
+        '<a class="btn btn-ghost" href="#contact">📞 緊急聯絡</a></div>';
+    } else if (now < DEPART){
+      card.innerHTML =
+        '<div class="label">⏳ 出發倒數</div>' +
+        '<h2>11/21 (六) 05:50 桃園 T2 集合</h2>' +
+        '<div class="cd"><div><b id="cdD">0</b><span>天</span></div><div><b id="cdH">0</b><span>時</span></div><div><b id="cdM">0</b><span>分</span></div><div><b id="cdS">0</b><span>秒</span></div></div>' +
+        '<div class="btn-row"><a class="btn btn-primary" href="#prep">✅ 行前準備</a><a class="btn btn-ghost" href="#days/1">看行程 ›</a></div>';
+      var tick = function(){
+        var diff = Math.max(0, DEPART - Date.now());
+        var s = Math.floor(diff/1000);
+        document.getElementById('cdD').textContent = Math.floor(s/86400);
+        document.getElementById('cdH').textContent = Math.floor(s%86400/3600);
+        document.getElementById('cdM').textContent = Math.floor(s%3600/60);
+        document.getElementById('cdS').textContent = s%60;
+        if (diff === 0) renderToday();
+      };
+      tick(); cdTimer = setInterval(tick, 1000);
+    } else {
+      card.innerHTML =
+        '<div class="label">🎉 旅程圓滿結束</div>' +
+        '<h2>謝謝大家，宿霧見證了我們的回憶！</h2>' +
+        '<p class="small muted">行程內容仍可隨時回顧。</p>' +
+        '<div class="btn-row"><a class="btn btn-ghost" href="#days/1">回顧行程 ›</a></div>';
+    }
+  }
+
+  /* ---------- Day switcher ---------- */
+  var currentDay = 1;
+  var dayTabs = document.querySelectorAll('.daytab');
+  var days = document.querySelectorAll('.day');
+  function showDay(n, scroll){
+    n = Math.min(5, Math.max(1, n|0));
+    currentDay = n;
+    dayTabs.forEach(function(b){ b.classList.toggle('active', +b.dataset.day === n); b.setAttribute('aria-selected', +b.dataset.day === n); });
+    days.forEach(function(d){ d.classList.toggle('active', +d.dataset.day === n); });
+    document.getElementById('prevDay').style.visibility = n === 1 ? 'hidden' : 'visible';
+    document.getElementById('nextDay').style.visibility = n === 5 ? 'hidden' : 'visible';
+    if (scroll) {
+      var top = document.getElementById('view-days').getBoundingClientRect().top + window.scrollY - 4;
+      window.scrollTo({top: Math.max(0, top), behavior: 'smooth'});
+    }
+  }
+  dayTabs.forEach(function(b){
+    b.addEventListener('click', function(){ history.replaceState(null,'','#days/' + b.dataset.day); showDay(+b.dataset.day, false); });
+  });
+  document.getElementById('prevDay').addEventListener('click', function(){ history.replaceState(null,'','#days/' + (currentDay-1)); showDay(currentDay-1, true); });
+  document.getElementById('nextDay').addEventListener('click', function(){ history.replaceState(null,'','#days/' + (currentDay+1)); showDay(currentDay+1, true); });
+  var tt = todayTrip();
+  if (tt) document.querySelector('.daytab[data-day="' + tt.d + '"]').classList.add('is-today');
+
+  /* ---------- Router (hash) ---------- */
+  var views = document.querySelectorAll('.view');
+  var tabs = document.querySelectorAll('.tabbar a');
+  function route(){
+    var h = (location.hash || '#home').slice(1).split('/');
+    var name = h[0];
+    if (!document.querySelector('.view[data-view="' + name + '"]')) name = 'home';
+    views.forEach(function(v){ v.classList.toggle('active', v.dataset.view === name); });
+    tabs.forEach(function(a){ a.classList.toggle('active', a.dataset.tab === name); });
+    if (name === 'days'){
+      var n = h[1] ? +h[1] : (todayTrip() ? todayTrip().d : currentDay);
+      showDay(n, false);
+    }
+    window.scrollTo(0, 0);
+  }
+  window.addEventListener('hashchange', route);
+
+  /* ---------- Checklist ---------- */
+  var CK_KEY = 'cebu2026-checklist-v1';
+  var CK = [
+    ['證件 & 金錢', [
+      ['passport','護照','效期 6 個月以上'],
+      ['etravel','E-Travel QR Code','截圖存在手機'],
+      ['php','披索現金（含小鈔）','小費、船隻行李費'],
+      ['card','信用卡','飯店保證金可用'],
+      ['twd','少量台幣','回國交通'],
+      ['insure','旅平險資料','保單號碼、緊急電話']
+    ]],
+    ['衣物', [
+      ['church','有袖上衣＋過膝褲裙＋包鞋','D1 聖嬰大教堂必穿'],
+      ['light','輕薄透氣衣物',''],
+      ['jacket','薄外套','車上、機上冷氣強'],
+      ['hat','帽子、太陽眼鏡',''],
+      ['rain','輕便雨具','雨傘請放托運'],
+      ['slipper','拖鞋 / 室內拖','']
+    ]],
+    ['水上活動', [
+      ['swim','泳衣','D2、D4 都會用到'],
+      ['coral','珊瑚鞋',''],
+      ['dry','防水手機袋',''],
+      ['towel','速乾毛巾',''],
+      ['sun','海洋友善防曬','D4 鯨鯊當天不可擦'],
+      ['rash','防曬衣 / 水母衣','鯨鯊日替代防曬乳']
+    ]],
+    ['盥洗用品', [
+      ['tooth','牙刷、牙膏','飯店不一定提供'],
+      ['wash','洗髮精、潤髮乳、沐浴乳',''],
+      ['razor','刮鬍刀、梳子','刀片請托運'],
+      ['dryer','吹風機（220V 可用）','如有需要']
+    ]],
+    ['電子 & 藥品', [
+      ['phone','手機、充電器、充電線',''],
+      ['power','行動電源','只能隨身，機上禁用'],
+      ['sim','漫遊 / eSIM / 網卡',''],
+      ['meds','個人藥品','感冒、腸胃、慢性病用藥'],
+      ['motion','暈車 / 暈船藥','D2 出海、D4 長途車程'],
+      ['bug','防蚊液','']
+    ]]
+  ];
+  var state = {};
+  try { state = JSON.parse(localStorage.getItem(CK_KEY) || '{}') || {}; } catch(e){ state = {}; }
+  var groupsEl = document.getElementById('ckGroups');
+  var total = 0;
+  CK.forEach(function(g){
+    var h = document.createElement('h3'); h.textContent = g[0]; groupsEl.appendChild(h);
+    g[1].forEach(function(it){
+      total++;
+      var lab = document.createElement('label'); lab.className = 'check';
+      var inp = document.createElement('input'); inp.type = 'checkbox'; inp.dataset.id = it[0]; inp.checked = !!state[it[0]];
+      var box = document.createElement('span'); box.className = 'box';
+      var txt = document.createElement('span'); txt.className = 'txt'; txt.textContent = it[1];
+      if (it[2]) { var sm = document.createElement('small'); sm.textContent = it[2]; txt.appendChild(sm); }
+      lab.appendChild(inp); lab.appendChild(box); lab.appendChild(txt);
+      groupsEl.appendChild(lab);
+      inp.addEventListener('change', function(){
+        state[it[0]] = inp.checked;
+        try { localStorage.setItem(CK_KEY, JSON.stringify(state)); } catch(e){}
+        updateCk();
+      });
+    });
+  });
+  function updateCk(){
+    var done = groupsEl.querySelectorAll('input:checked').length;
+    document.getElementById('ckCount').textContent = done + ' / ' + total + ' 已準備' + (done === total ? ' 🎉' : '');
+    document.getElementById('ckBar').style.width = (done/total*100) + '%';
+  }
+  document.getElementById('ckReset').addEventListener('click', function(){
+    if (!confirm('確定要清除所有勾選嗎？')) return;
+    state = {};
+    try { localStorage.removeItem(CK_KEY); } catch(e){}
+    groupsEl.querySelectorAll('input').forEach(function(i){ i.checked = false; });
+    updateCk();
+  });
+  updateCk();
+
+  /* ---------- Toast ---------- */
+  function toast(msg){
+    var t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show');
+    setTimeout(function(){ t.classList.remove('show'); }, 2600);
+  }
+  window.addEventListener('online', function(){ toast('已恢復網路連線'); });
+  window.addEventListener('offline', function(){ toast('目前離線，仍可查看已存的行程'); });
+
+  renderToday();
+  route();
+  // 每分鐘檢查一次日期（跨日時自動更新「今天」）
+  var lastDay = localTodayStr();
+  setInterval(function(){ var s = localTodayStr(); if (s !== lastDay){ lastDay = s; renderToday(); } }, 60000);
+
+  /* ---------- 離線快取 ---------- */
+  if ('serviceWorker' in navigator && location.protocol === 'https:') {
+    window.addEventListener('load', function(){ navigator.serviceWorker.register('sw.js').catch(function(){}); });
+  }
+})();
+</script>
+</body>
+</html>
