@@ -1382,8 +1382,13 @@ footer .script{font-family:var(--script);font-size:22px;color:var(--tiffany-d);d
     document.getElementById('prevDay').style.visibility = n === 1 ? 'hidden' : 'visible';
     document.getElementById('nextDay').style.visibility = n === 5 ? 'hidden' : 'visible';
     if (scroll) {
-      var top = document.querySelector('.daytabs').getBoundingClientRect().top + window.scrollY - 10;
-      window.scrollTo({top: Math.max(0, top), behavior: reduceMotion ? 'auto' : 'smooth'});
+      // .daytabs 是 sticky，黏住後 rect.top 恆為 safe-area+6，不能拿來算位置（會每次往下飄）。
+      // 改以非 sticky 的 #dayWrap 為基準：讓當天內容起點剛好落在黏住的 tabs 下方，且只往上拉回、不往下捲。
+      var tabsEl = document.querySelector('.daytabs');
+      var stickyTop = parseFloat(getComputedStyle(tabsEl).top) || 0;
+      var target = document.getElementById('dayWrap').getBoundingClientRect().top + window.scrollY
+                   - stickyTop - tabsEl.offsetHeight - 10;
+      if (window.scrollY > target) window.scrollTo({top: Math.max(0, target), behavior: reduceMotion ? 'auto' : 'smooth'});
     }
     observeIn(activeDayEl());
   }
